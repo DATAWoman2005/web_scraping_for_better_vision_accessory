@@ -73,9 +73,6 @@ Fail-safe saving: If no rows are parsed, the script exits cleanly; otherwise it 
 
 ## Challenges & Solutions
 
-Dynamic / lazy loading: Only a subset renders initially.
-Solution: Progress-aware scrolling with a nudge and termination when counts stop increasing (with a safety cap).
-
 Promo/ad tiles in grid → filter by presence of mandatory sub-elements
 Solution: Filter to tiles that have both a brand and a product name, e.g.  
   `div.prod-holder:has(.catalog-name):has(.product_name), div.product-holder:has(.catalog-name):has(.product_name)`  
@@ -91,7 +88,7 @@ Solution: Force desktop layout with --window-size=1920,3000 and a standard deskt
 
 Session lifecycle errors. Sending commands after driver.quit() causes “connection refused.”
 Solution: On critical wait failure, quit and SystemExit(1); optional debug HTML
-Ethics & Compliance
 
+## Ethics & Compliance
 Educational/portfolio use; scrape responsibly. 
 Respect site terms and avoid excessive request rates. This tool does not bypass authentication or access protected data.
