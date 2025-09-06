@@ -1,7 +1,7 @@
 # FramesDirect Eyeglasses — Production-style Web Scraper
 <!-- Badges -->
 [![Python](https://img.shields.io/badge/Python-3.12-blue)](https://www.python.org/)
-[![License](https://img.shields.io/github/license/<DATAWoman2005>/web_scraping_for_better_vision_accessory)](./LICENSE)
+[![License](https://img.shields.io/github/license/DATAWoman2005/web_scraping_for_better_vision_accessory)](./LICENSE)
 [![Built with Selenium](https://img.shields.io/badge/Built%20with-Selenium-43B02A?logo=selenium)](https://www.selenium.dev/)
 [![BeautifulSoup](https://img.shields.io/badge/Parser-BeautifulSoup4-6DB33F)](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 [![Headless Chrome](https://img.shields.io/badge/Browser-Headless%20Chrome-4285F4?logo=googlechrome&logoColor=white)](https://chromium.org/)
