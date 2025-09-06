@@ -49,23 +49,6 @@ except (TimeoutError, Exception) as e:
     raise SystemExit(1)  # stop after quitting, avoid connection refused
     print("Closed")
 
-# Scroll to the bottom repeatedly so all items lazy-load
-print("Scrolling to load all products...")
-prev_count = 0
-for _ in range(25):  # safety limit to break the loop
-    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    time.sleep(1.2)  # giving the page time to load new tiles
-    curr_count = len(driver.find_elements(By.CLASS_NAME, "prod-holder"))
-    if curr_count <= prev_count:  # little nudge to trigger last batch
-        driver.execute_script("window.scrollBy(0, -200);")
-        time.sleep(0.5)
-        driver.execute_script("window.scrollBy(0, 200);")
-        time.sleep(0.7)
-        curr_count = len(driver.find_elements(By.CLASS_NAME, "prod-holder"))
-        if curr_count <= prev_count:
-            break
-    prev_count = curr_count
-print(f"Total tiles detected after scrolling: {prev_count}")
 
 # Step 2 - Data Parsing and Extraction
 # Get page source and parse using BeautifulSoup
